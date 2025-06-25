@@ -306,3 +306,120 @@ In both examples:
 $$
 \boxed{\text{Adjacency depends on the set of gray-level values } V \text{ and whether 4-adjacency or 8-adjacency is used. Only pixels with values in } V \text{ are considered adjacent.}}
 $$
+
+![alt text](image-44.png)
+
+![alt text](image-45.png)
+![alt text](image-46.png)
+![alt text](image-47.png)
+![alt text](image-48.png)
+![alt text](image-49.png)
+![alt text](image-50.png)
+![alt text](image-51.png)
+
+City block distance, also known as Manhattan distance or taxicab distance, is a way to measure distance between two points by summing the absolute differences of their coordinates. It is called city block distance because it represents the distance a vehicle would travel on a grid-like street network, like in Manhattan, where it can only travel along the streets (either horizontally or vertically). 
+Formula:
+Given two points (x1, y1) and (x2, y2), the city block distance is calculated as: 
+Code
+
+|x1 - x2| + |y1 - y2|
+
+Example:
+If point A is at (2, 3) and point B is at (5, 7), the city block distance between them is:
+Code
+
+|2 - 5| + |3 - 7| = |-3| + |-4| = 3 + 4 = 7
+
+Key Characteristics:
+
+    Grid-based:
+    It is suitable for measuring distances in grid-like structures like city streets or pixel grids in image processing.
+    Not the shortest path:
+    Unlike Euclidean distance (straight line), city block distance follows the grid lines, potentially taking a longer path.
+    Sum of absolute differences:
+    It is the sum of the absolute differences in coordinates, not the square root of the sum of squared differences (as in Euclidean distance).
+    Used in various applications:
+    City block distance is applied in image processing, computer vision, and other fields where movement along grid lines is relevant. 
+
+    City Block Distance
+    The name City block distance (also referred to as Manhattan distance) is explained if you consider two points in the xy-plane. ...
+
+In image processing, the chessboard distance (or Chebyshev distance) between two pixels is the minimum number of moves a king would need to travel from one pixel to the other on an otherwise empty chessboard. It's calculated as the maximum of the absolute differences of their coordinates. This distance metric is useful in scenarios where diagonal movement is allowed, such as in certain image segmentation or connectivity algorithms.
+
+![alt text](image-52.png)
+
+This image demonstrates **path connectivity in a digital image**, a core concept in **mathematical morphology** and **image analysis**. Let's break it down:
+
+---
+
+### **Terminology:**
+
+* **V = {2, 3, 5}**: The set of valid (or foreground) pixel values for path traversal.
+* **p and q**: Two pixels (black pixels in the top image) that we are trying to connect using a path.
+* **4-path, 8-path, m-path**: Different types of neighborhood-based connectivity.
+
+---
+
+### **Top Grid (Main Image):**
+
+* It shows a 6x6 grid of grayscale values.
+* Pixels `p` and `q` are marked in black.
+* The task: **Is there a valid path from p to q using only pixels in V = {2, 3, 5}?**
+
+---
+
+### **Connectivity Models (Bottom Three Grids):**
+
+#### **1. 4-path:**
+
+* Uses **4-neighbor connectivity**: Up, Down, Left, Right.
+* Diagonal steps are not allowed.
+* Arrows show a step-by-step path from `p` to `q`, moving through values only in V = {2, 3, 5}.
+
+#### **2. 8-path:**
+
+* Uses **8-neighbor connectivity**: Up, Down, Left, Right + Diagonals.
+* More flexible pathfinding than 4-path.
+* The path includes diagonal movement.
+
+#### **3. m-path (mixed path):**
+
+* A hybrid of 4-path and 8-path that **avoids ambiguity in connected components**.
+* m-paths allow diagonal movement only **if** the two corresponding 4-neighbors are not both in V.
+* Helps avoid false connections in morphological processing.
+
+![alt text](image-53.png)
+
+# Intensity Transformation and Spatial Filtering
+
+![alt text](image-54.png)
+![alt text](image-55.png)
+![alt text](image-56.png)
+![alt text](image-57.png)
+![alt text](image-58.png)
+![alt text](image-59.png)
+![alt text](image-60.png)
+![alt text](image-61.png)
+![alt text](image-62.png)
+![alt text](image-63.png)
+![alt text](image-64.png)
+![alt text](image-65.png)
+![alt text](image-66.png)
+![alt text](image-67.png)
+
+# Histogram Processing
+
+![alt text](image-68.png)
+![alt text](image-69.png)
+![alt text](image-70.png)
+![alt text](image-71.png)
+![alt text](image-72.png)
+![alt text](image-73.png)
+![alt text](image-74.png)
+![alt text](image-75.png)
+![alt text](image-76.png)
+![alt text](image-77.png)
+![alt text](image-78.png)
+![alt text](image-79.png)
+![alt text](image-80.png)
+
